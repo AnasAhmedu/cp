@@ -1,21 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>My Landing Page</title>
-  <style>
-    body{font-family:system-ui, sans-serif; margin:0; padding:40px; text-align:center;}
-    .card{max-width:720px;margin:0 auto;border-radius:12px;padding:30px;box-shadow:0 6px 20px rgba(0,0,0,.08);}
-    h1{margin-top:0;}
-    a.button{display:inline-block;margin-top:18px;padding:10px 18px;border-radius:8px;text-decoration:none;border:1px solid #222;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free eBook Landing Page</title>
+<style>
+    /* Body & Background */
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1abc9c, #16a085, #2ecc71, #27ae60);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        overflow: hidden;
+        text-align: center;
+        background-size: 400% 400%;
+        animation: gradientMove 15s ease infinite;
+    }
+
+    @keyframes gradientMove {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+    }
+
+    /* Hero Image */
+    .hero-image {
+        max-width: 90%;
+        margin-top: 50px;
+        border-radius: 20px;
+        box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+        animation: shine 4s infinite alternate;
+    }
+
+    @keyframes shine {
+        0% {filter: brightness(1);}
+        50% {filter: brightness(1.2);}
+        100% {filter: brightness(1);}
+    }
+
+    /* Headline & Description */
+    .headline {
+        margin: 30px 20px 10px 20px;
+        font-size: 2.5em;
+        font-weight: bold;
+        text-shadow: 0 0 5px rgba(255,255,255,0.5), 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .description {
+        font-size: 1.3em;
+        max-width: 700px;
+        margin-bottom: 30px;
+        line-height: 1.6;
+        text-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    /* Download Button */
+    .download-btn {
+        display: inline-block;
+        margin-bottom: 50px;
+        padding: 18px 40px;
+        background: linear-gradient(45deg, #312ecc, #711602);
+        color: white;
+        font-size: 1.3em;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 12px;
+        box-shadow: 0 0 25px rgba(0, 10, 200, 0.5);
+        transition: all 0.3s ease-in-out;
+        animation: pulse 2s infinite;
+    }
+
+    .download-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 50px rgba(0, 255, 120, 0.7);
+    }
+
+    @keyframes pulse {
+        0% {box-shadow: 0 0 15px rgba(0, 200, 23, 0.5);}
+        50% {box-shadow: 0 0 35px rgba(0,255,120,0.7);}
+        100% {box-shadow: 0 0 15px rgba(0,200,100,0.5);}
+    }
+
+    /* Responsive adjustments */
+    @media(max-width: 768px) {
+        .headline { font-size: 2em; }
+        .description { font-size: 1.1em; }
+        .download-btn { font-size: 1.1em; padding: 15px 30px; }
+    }
+</style>
 </head>
 <body>
-  <div class="card">
-    <h1>Welcome to my landing page</h1>
-    <p>This is a simple one-page demo. Edit this file on GitHub to update the live site.</p>
-    <a class="button" href="#">Learn more</a>
-  </div>
+
+    <!-- Hero Image -->
+    <img class="hero-image" src="https://i.postimg.cc/m2Dbc0B2/Capcut-Pro.jpg" alt="eBook Cover">
+
+    <!-- Headline & Description -->
+    <div class="headline">Grab Your Free eBook Today!</div>
+    <div class="description">
+        Unlock the secrets to success and knowledge packed in this exclusive eBook. Click the button below to download instantly and start your journey now!
+    </div>
+
+    <!-- Download Button -->
+    <a class="download-btn" href="page2.html" target="_blank">Download eBook</a>
+
 </body>
 </html>
