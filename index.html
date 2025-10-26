@@ -16,7 +16,8 @@
         align-items: center;
         justify-content: flex-start;
         min-height: 100vh;
-        overflow: hidden;
+        overflow-y: auto;              /* ✅ allow scrolling */
+        scroll-behavior: smooth;       /* ✅ smooth scroll effect */
         text-align: center;
         background-size: 400% 400%;
         animation: gradientMove 15s ease infinite;
@@ -62,7 +63,7 @@
     /* Download Button */
     .download-btn {
         display: inline-block;
-        margin-bottom: 50px;
+        margin-bottom: 100px; /* extra spacing for scroll */
         padding: 18px 40px;
         background: linear-gradient(45deg, #312ecc, #711602);
         color: white;
